@@ -259,14 +259,21 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   if (lightbox) {
-    document.querySelectorAll(".project-thumb.clickable").forEach(thumb => {
-      thumb.setAttribute("tabindex", "0");
-      thumb.setAttribute("role", "button");
+    document.querySelectorAll(".project-card").forEach(card => {
+      const thumb = card.querySelector(".project-thumb.clickable");
+      if (!thumb) return;
 
-      const trigger = () => openLightbox(thumb.closest(".project-card"));
+      card.setAttribute("tabindex", "0");
+      card.setAttribute("role", "button");
 
-      thumb.addEventListener("click", trigger);
-      thumb.addEventListener("keydown", (e) => {
+      const trigger = () => openLightbox(card);
+
+      card.addEventListener("click", (e) => {
+        if (e.target.closest("a")) return;
+        trigger();
+      });
+      card.addEventListener("keydown", (e) => {
+        if (e.target.closest("a")) return;
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
           trigger();
