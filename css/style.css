@@ -840,4 +840,30 @@ footer {
   .project-grid { grid-template-columns: 1fr; }
 }
 
+/* ------------------------------------------ */
+/* Fix: clip zoomed/panned image inside the
+   lightbox so it never spills outside the card */
+/* ------------------------------------------ */
 
+.lightbox-media-wrap {
+  overflow: hidden;
+}
+
+.lightbox-media {
+  overflow: hidden;
+}
+
+.lightbox-media img {
+  touch-action: none;
+  will-change: transform;
+  -webkit-user-drag: none;
+  user-select: none; 
+}
+
+.lightbox-media img.zoomed {
+  cursor: grab;
+}
+
+.lightbox-media img.panning {
+  cursor: grabbing;
+}
