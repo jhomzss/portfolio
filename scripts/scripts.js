@@ -168,7 +168,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function buildMediaEl(item, alt) {
     if (typeof item === "object" && item.embed) {
       const iframe = document.createElement("iframe");
-      iframe.src = item.embed + "?autoplay=1";
+      iframe.src = item.embed + "?autoplay=0";
       iframe.width = "100%";
       iframe.height = "100%";
       iframe.frameBorder = "0";
