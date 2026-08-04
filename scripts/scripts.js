@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const gallery = card.querySelector(".project-gallery");
       const mainSrc = thumb ? thumb.dataset.src : null;
 
-      if (mainSrc && videoExts.includes(getExt(mainSrc))) flags.push("Video");
+      if ((mainSrc && videoExts.includes(getExt(mainSrc))) || thumb.dataset.video) flags.push("Video");
       if (gallery && gallery.querySelectorAll("img").length > 1) {
         flags.push(`Gallery · ${gallery.querySelectorAll("img").length}`);
       }
@@ -165,7 +165,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const prevBtn = document.getElementById("lightboxPrev");
   const nextBtn = document.getElementById("lightboxNext");
 
-  function buildMediaEl(src, alt) {
+  function buildMediaEl(item, alt) {
+    if (typeof item === "object" && item.embed) {
+      const iframe = document.createElement("iframe");
+      iframe.src = item.embed + "?autoplay=1";
+      iframe.width = "100%";
+      iframe.height = "100%";
+      iframe.frameBorder = "0";
+      iframe.allow = "autoplay; encrypted-media; picture-in-picture";
+      iframe.allowFullscreen = true;
+      return iframe;
+    }
+    const src = item;
     if (videoExts.includes(getExt(src))) {
       const video = document.createElement("video");
       video.src = src;
@@ -199,9 +210,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const thumb = card.querySelector(".project-thumb");
     const galleryEl = card.querySelector(".project-gallery");
 
-    galleryItems = galleryEl
-      ? Array.from(galleryEl.querySelectorAll("img")).map(el => el.getAttribute("src"))
-      : [thumb.dataset.src];
+    galleryItems = thumb.dataset.video
+      ? [{ embed: thumb.dataset.video }]
+      : galleryEl
+        ? Array.from(galleryEl.querySelectorAll("img")).map(el => el.getAttribute("src"))
+        : [thumb.dataset.src];
     galleryIndex = 0;
 
     lightboxTitle.textContent = thumb.dataset.title || "";
