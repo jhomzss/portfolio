@@ -1,0 +1,729 @@
+<!--projects and works-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects & Works | Jhomel Togado</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/x-icon" href="../file/Jt.png">
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo" id="nav-name"><a href="https://jhomzss.github.io/portfolio/">Jhomel Togado</a></div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <div class="nav-links" id="navLinks">
+      <a href="https://jhomzss.github.io/portfolio/">About</a>
+      <a href="#" id="highlight">Projects & Works</a>
+      <a href="#" id="resumeBtn" class="resume-link">View Resume</a>
+    </div>
+  </nav>
+
+  <main class="wide">
+    <section class="page-header section">
+      <p class="eyebrow">Selected work</p>
+      <h1 class="hero-name" style="font-size:2.4rem;">Projects & Works</h1>
+      <p class="hero-lead">
+        Everything I've built and designed, school projects and personal, own-time
+        work side by side. Filter by where it came from or what kind of work it is,
+        then click any preview for the full write-up, extra images, and links.
+      </p>
+    </section>
+
+    <!--
+      NOTE FOR JHOMEL: each card below has data-scope="academic" or "personal".
+      I marked the ones I was confident about (SmartBarangay = academic since it's
+      your capstone; your name/stall logos = personal) but the rest are my best
+      guess based on naming (things like "HCI Activity" and "Multimedia Activity"
+      read like class requirements, "Am I?" and the stall pieces read like your
+      own work). Please skim through and flip data-scope on anything I guessed
+      wrong, it's a one-word edit per card, nothing else needs to change.
+    -->
+
+    <div class="filters">
+      <div class="filter-group">
+        <span class="filter-group-label">Where it's from</span>
+        <div class="filter-pills" id="scopeFilters">
+          <button class="filter-pill active" data-scope-filter="all">All Works</button>
+          <button class="filter-pill" data-scope-filter="academic">School Projects</button>
+          <button class="filter-pill" data-scope-filter="personal">Personal / Own Time</button>
+        </div>
+      </div>
+      <div class="filter-group">
+        <span class="filter-group-label">Type of work</span>
+        <div class="filter-pills" id="disciplineFilters">
+          <button class="filter-pill active" data-discipline-filter="all">All Disciplines</button>
+          <button class="filter-pill" data-discipline-filter="webdev">Web Development</button>
+          <button class="filter-pill" data-discipline-filter="uiux">UI/UX Design</button>
+          <button class="filter-pill" data-discipline-filter="animation">Animation</button>
+          <button class="filter-pill" data-discipline-filter="design">Graphic Design</button>
+          <button class="filter-pill" data-discipline-filter="3d">3D / Blender</button>
+          <button class="filter-pill" data-discipline-filter="gamedev">Game Dev / Level Design</button>
+          <button class="filter-pill" data-discipline-filter="video">Video Editing</button>
+        </div>
+      </div>
+    </div>
+
+    <p class="results-count" id="resultsCount"></p>
+
+    <div class="project-grid" id="projectGrid">
+
+      <!-- WEB DEVELOPMENT -->
+
+      <div class="project-card" data-scope="academic" data-discipline="webdev">
+        <div class="project-thumb clickable"
+             data-src="../images/smartbarangay.png"
+             data-title="SmartBarangay (Capstone Project)"
+             data-desc="A capstone project I built with my team. Residents can request barangay clearances, permits, file complaints, or reserve for events online instead of going in person.">
+          <img src="../images/smartbarangay.png" alt="Smart Barangay">
+        </div>
+        <div class="project-info">
+          <h3>SmartBarangay (Capstone Project)</h3>
+          <p class="project-desc">A capstone project I built with my team. Residents can request barangay clearances, permits, file complaints, or reserve for events online instead of going in person.</p>
+          <div class="tag-list small">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">PHP</span>
+            <span class="tag">MySQL</span>
+          </div>
+          
+          <div class="project-links">
+  <a href="https://github.com/jhomzss/smartbarangay"
+     target="_blank"
+     rel="noopener"
+     class="project-link">
+    Source Code <span aria-hidden="true">↗</span>
+  </a>
+</div>
+
+        <div class="project-gallery" hidden>
+            <img src="../images/barangay1.png" alt="">
+            <img src="../images/barangay2.png" alt="">
+            <img src="../images/barangay3.png" alt="">
+            <img src="../images/barangay4.png" alt="">
+            <img src="../images/barangay5.png" alt="">
+            <img src="../images/barangay6.png" alt="">
+            <img src="../images/barangay7.png" alt="">
+            <img src="../images/barangay8.png" alt="">
+            <img src="../images/barangay9.png" alt="">
+            <img src="../images/barangay10.png" alt="">
+            <img src="../images/barangay11.png" alt="">
+            <img src="../images/barangay12.png" alt="">
+        </div>
+
+          <div class="project-details" hidden>
+            <h4>Why we built it</h4>
+            <p>Getting anything from the barangay usually means showing up in person and waiting around, so my team and I wanted to move that whole process online for our capstone.</p>
+            <h4>What it does</h4>
+            <p>Residents can request a barangay clearance or permit, file a complaint, or reserve for an event, all from home. They get email and SMS updates on the status, and once a document is ready, another notification lets them know it's ready for pickup onsite. Event reservations follow a similar notification flow, just with a different process behind it.</p>
+            <h4>Where it's at</h4>
+            <p>We previously hosted the project and had it live for one year, but unfortunately, the hosting period has ended. For now, the project is available as source code only. Since GitHub Pages doesn't support PHP, we can't host the fully functional version there.</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="webdev">
+        <div class="project-thumb clickable"
+             data-src="../images/nyitikshop.png"
+             data-title="NyitikShop"
+             data-desc="A static Django e-commerce display for gaming and PC parts. Has login, signup, adding to cart, and checkout, but it's just a front-end, nothing actually processes.">
+          <img src="../images/nyitikshop.png" alt="NyitikShop">
+        </div>
+        <div class="project-info">
+          <h3>NyitikShop</h3>
+          <p class="project-desc">A static Django e-commerce display for gaming and PC parts. Has login, signup, adding to cart, and checkout, but it's just a front-end, nothing actually processes.</p>
+          <div class="tag-list small">
+            <span class="tag">Django</span>
+            <span class="tag">Python</span>
+            <span class="tag">Static Site</span>
+          </div>
+
+          <div class="project-links">
+  <a href="https://github.com/jhomzss/NyitikShop"
+     target="_blank"
+     rel="noopener"
+     class="project-link">
+    Source Code <span aria-hidden="true">↗</span>
+  </a>
+</div>
+
+          <div class="project-details" hidden>
+            <h4>Why I built it</h4>
+            <p>
+                This was our final group project for Special Topic 2, where we were tasked
+                with creating an e-commerce website using Django. The project gave us an
+                opportunity to apply what we learned about Django and web development by
+                building an e-commerce interface as a team.
+            </p>
+            <h4>What it does</h4>
+            <p>
+                The website features product listings, an add-to-cart feature, and a
+                checkout interface. It is a static demonstration of an e-commerce
+                experience, designed to showcase the website's interface and user flow
+                rather than function as a fully operational online store.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- UI/UX DESIGN -->
+
+      <div class="project-card" data-scope="academic" data-discipline="uiux">
+        <div class="project-thumb clickable"
+             data-src="../images/SmartbrgyPrototype.png"
+             data-title="SmartBarangay Prototype"
+             data-desc="The Figma wireframes for SmartBarangay. A teammate designed the layout, and the whole team collaborated on the flow before we started developing.">
+          <img src="../images/SmartbrgyPrototype.png" alt="SmartBarangay Prototype">
+        </div>
+        <div class="project-info">
+          <h3>SmartBarangay Prototype</h3>
+          <p class="project-desc">The Figma wireframes for SmartBarangay. A teammate designed the layout, and the whole team collaborated on the flow before we started developing.</p>
+          <div class="tag-list small">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Wireframing</span>
+          </div>
+
+          <div class="project-links">
+         <a href="https://www.figma.com/design/atzgeeO5IHjC6Wrl0dau3q/System-Prototype?node-id=0-1&t=hFSCnU6AYp09n6yy-1" target="_blank" rel="noopener" class="project-link">View on Figma <span aria-hidden="true">↗</span></a>
+       </div>
+
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="uiux">
+        <div class="project-thumb clickable"
+             data-src="../images/amIUI.png"
+             data-title="Am I UI Design prototype"
+             data-desc="A draft UI for 'Am I?', a hybrid card and phone game for my Game Development subject. My part was designing the app screens.">
+          <img src="../images/amIUI.png" alt="Am I UI Design Prototype">
+        </div>
+        <div class="project-info">
+          <h3>Am I UI Design prototype</h3>
+          <p class="project-desc">A draft UI for 'Am I?', a hybrid card and phone game for my Game Development subject. My part was designing the app screens.</p>
+          <div class="tag-list small">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Wireframing</span>
+          </div>
+
+          <div class="project-links">
+         <a href="https://www.figma.com/design/krBwoVZOp6rnx32rEpp53e/AM-I-UI-DESIGN--Draft-?node-id=0-1&t=b3qS5WqKDhTOo467-1" target="_blank" rel="noopener" class="project-link">View on Figma <span aria-hidden="true">↗</span></a>
+       </div>
+
+          <div class="project-details" hidden>
+            <h4>About the game</h4>
+            <p>'Am I?' mixes physical cards with a phone app. Everyone in the room is a suspect, but only 2 to 3 of them are real. Players use ability cards, evidence cards, and profile cards to narrow it down and try to identify who they actually are.</p>
+            <h4>My part</h4>
+            <p>I was assigned to draft the app-side UI as part of our Game Development team.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="uiux">
+        <div class="project-thumb clickable"
+             data-src="../images/softdev.png"
+             data-title="Software Development prototype"
+             data-desc="A class-wide gaming parts e-commerce project. We split into groups working on different parts, then had to sync it all together into one site.">
+          <img src="../images/softdev.png" alt="Software Development Prototype">
+        </div>
+        <div class="project-info">
+          <h3>Software Development prototype</h3>
+          <p class="project-desc">A class-wide gaming parts e-commerce project. We split into groups working on different parts, then had to sync it all together into one site.</p>
+          <div class="tag-list small">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Wireframing</span>
+          </div>
+
+          <div class="project-links">
+         <a href="https://www.figma.com/design/7u3jOTKXB7Optyi4UM3ibE/softdev-draft?node-id=0-1&t=NgS8kpZNp4PROas9-1" target="_blank" rel="noopener" class="project-link">View on Figma <span aria-hidden="true">↗</span></a>
+       </div>
+
+          <div class="project-details" hidden>
+            <h4>How it was split up</h4>
+            <p>The whole class worked on this together, split into groups. One group handled login, signup, forgot password, and the main product page, another handled adding products to the cart and the rest of the shopping flow. It only worked because the groups kept communicating about how their parts connected.</p>
+            <h4>Where it's at</h4>
+            <p>We deployed it, but I no longer have the live link. I do have the source code, and I'll update this card with it soon.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="uiux">
+        <div class="project-thumb clickable"
+             data-src="../images/hciProject.png"
+             data-title="HCI Project prototype"
+             data-desc="A group activity for HCI. Our professor wanted something genuinely useful, so we designed a Discord-inspired app for exploring courses and joining classes.">
+          <img src="../images/hciProject.png" alt="HCI Project Prototype">
+        </div>
+        <div class="project-info">
+          <h3>HCI Project prototype</h3>
+          <p class="project-desc">A group activity for HCI. Our professor wanted something genuinely useful, so we designed a Discord-inspired app for exploring courses and joining classes.</p>
+          <div class="tag-list small">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Wireframing</span>
+          </div>
+          
+          <div class="project-links">
+         <a href="https://www.figma.com/design/vvkhSQxA27L9pjwvCzRgzQ/HCI-GROUP-1?node-id=0-1&t=GnF1H7IP5ytFz4uE-1" target="_blank" rel="noopener" class="project-link">View on Figma <span aria-hidden="true">↗</span></a>
+       </div>
+
+          <div class="project-details" hidden>
+            <h4>What it does</h4>
+            <p>Beyond course browsing and joining classes, people can interact with each other and post to their own profile, closer to a community space than a plain course catalog.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="uiux">
+        <div class="project-thumb clickable"
+             data-src="../images/hciActivity.png"
+             data-title="HCI Activity prototype"
+             data-desc="A solo HCI exercise where I had to actually apply usability principles to a design instead of just writing about them.">
+          <img src="../images/hciActivity.png" alt="HCI Activity Prototype">
+        </div>
+        <div class="project-info">
+          <h3>HCI Activity prototype</h3>
+          <p class="project-desc">A solo HCI exercise where I had to actually apply usability principles to a design instead of just writing about them.</p>
+          <div class="tag-list small">
+            <span class="tag">Figma</span>
+            <span class="tag">UI/UX Design</span>
+            <span class="tag">Wireframing</span>
+          </div>
+
+          <div class="project-links">
+         <a href="https://www.figma.com/design/btydCP9sUKUYOTdLx485s6/Individual-Activity?t=RVLJEop8XRN3p1sB-1" target="_blank" rel="noopener" class="project-link">View on Figma <span aria-hidden="true">↗</span></a>
+       </div>
+
+        </div>
+      </div>
+
+      <!-- ANIMATION -->
+
+      <div class="project-card" data-scope="academic" data-discipline="animation">
+        <div class="project-thumb clickable"
+             data-src="../images/magicleap.gif"
+             data-title="Magic Leap Logo Animation"
+             data-desc="I didn't design this logo, just animated it. Downloaded the assets from Canva and used Alight Motion to make it loop smoothly.">
+          <img src="../images/magicleap.gif" alt="Magic Leap Logo Animation">
+        </div>
+        <div class="project-info">
+          <h3>Magic Leap Logo Animation</h3>
+          <p class="project-desc">I didn't design this logo, just animated it. Downloaded the assets from Canva and used Alight Motion to make it loop smoothly.</p>
+          <div class="tag-list small">
+            <span class="tag">Alight Motion</span>
+            <span class="tag">Animation</span>
+          </div>
+
+          <!-- <div class="project-links">
+         <a href="https://canva.link/4nowluqrbji679v" target="_blank" rel="noopener" class="project-link">Assets <span aria-hidden="true">↗</span></a>
+       </div> -->
+
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="animation">
+        <div class="project-thumb clickable"
+             data-src="../images/3reserved.gif"
+             data-title="Am I? (3 reserved cards Animation)"
+             data-desc="Once the card assets were done, I animated them to help explain the game's instructions, showing how the 3 reserved cards work.">
+          <img src="../images/3reserved.gif" alt="3 Reserved Cards Animation">
+        </div>
+        <div class="project-info">
+          <h3>Am I? (3 reserved cards Animation)</h3>
+          <p class="project-desc">Once the card assets were done, I animated them to help explain the game's instructions, showing how the 3 reserved cards work.</p>
+          <div class="tag-list small">
+            <span class="tag">Alight Motion</span>
+            <span class="tag">Animation</span>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="animation">
+        <div class="project-thumb clickable"
+             data-src="../images/6cards.gif"
+             data-title="Am I? (6 cards Animation)"
+             data-desc="Same idea, but for all 6 cards this time, animated to walk players through the full set of instructions.">
+          <img src="../images/6cards.gif" alt="6 Cards Animation">
+        </div>
+        <div class="project-info">
+          <h3>Am I? (6 cards Animation)</h3>
+          <p class="project-desc">Same idea, but for all 6 cards this time, animated to walk players through the full set of instructions.</p>
+          <div class="tag-list small">
+            <span class="tag">Alight Motion</span>
+            <span class="tag">Animation</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="animation">
+        <div class="project-thumb clickable"
+     data-src="../images/aquasnap-thumbnail.png"
+     data-video="https://www.youtube.com/embed/GOR6tCza-84"
+     data-title="AquaSnap Innovation Product Animation"
+     data-desc="A 2-minute animated walkthrough for AquaSnap Innovation. Generated the initial assets with AI, cleaned them up in Illustrator, then animated everything in After Effects with an AI voiceover.">
+  <img src="../images/aquasnap-thumbnail.png" alt="AquaSnap Innovation Product Animation">
+</div>
+        <div class="project-info">
+          <h3>AquaSnap Innovation Product Animation</h3>
+          <p class="project-desc">A 2-minute animated walkthrough for AquaSnap Innovation. Generated the initial assets with AI, cleaned them up in Illustrator, then animated everything in After Effects with an AI voiceover.</p>
+          <div class="tag-list small">
+            <span class="tag">Motion Graphics</span>
+            <span class="tag">2D</span>
+            <span class="tag">After Effects</span>
+            <span class="tag">Adobe Illustrator</span>
+          </div>
+
+          <div class="project-details" hidden>
+            <h4>How it was made</h4>
+            <p>I prompted Claude to generate the assets as an Illustrator file, tweaked the shapes from there, then imported everything into After Effects to animate. Added an AI voiceover on top to explain what the product actually does.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRAPHIC DESIGN -->
+
+      <div class="project-card" data-scope="academic" data-discipline="design">
+        <div class="project-thumb clickable"
+             data-src="../images/technologo.png"
+             data-title="AquaSnap Innovation Logo"
+             data-desc="A logo for AquaSnap Innovation. Kept it simple so it still reads fine even small.">
+          <img src="../images/technologo.png" alt="AquaSnap Innovation Logo">
+        </div>
+        <div class="project-info">
+          <h3>AquaSnap Innovation Logo</h3>
+          <p class="project-desc">A logo for AquaSnap Innovation. Kept it simple so it still reads fine even small.</p>
+          <div class="tag-list small">
+            <span class="tag">Illustrator</span>
+            <span class="tag">Graphic Design</span>
+            <span class="tag">Logo Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="design">
+        <div class="project-thumb clickable"
+             data-src="../images/ecoflood.png"
+             data-title="ECOFLOOD Smart Solutions Logo"
+             data-desc="Branding for ECOFLOOD Smart Solutions. Went with simple shapes that hint at what the product actually does.">
+          <img src="../images/ecoflood.png" alt="ECOFLOOD Smart Solutions Logo">
+        </div>
+        <div class="project-info">
+          <h3>ECOFLOOD Smart Solutions Logo</h3>
+          <p class="project-desc">Branding for ECOFLOOD Smart Solutions. Went with simple shapes that hint at what the product actually does.</p>
+          <div class="tag-list small">
+            <span class="tag">Illustrator</span>
+            <span class="tag">Graphic Design</span>
+            <span class="tag">Logo Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="personal" data-discipline="design">
+        <div class="project-thumb clickable"
+             data-src="../images/logo.jpg"
+             data-title="Jhomel Togado Logo"
+             data-desc="My own logo, basically. Wanted something simple enough that I'd actually want to use it everywhere.">
+          <img src="../images/logo.jpg" alt="Jhomel Togado Logo">
+        </div>
+        <div class="project-info">
+          <h3>Jhomel Togado Logo</h3>
+          <p class="project-desc">My own logo, basically. Wanted something simple enough that I'd actually want to use it everywhere.</p>
+          <div class="tag-list small">
+            <span class="tag">Photoshop</span>
+            <span class="tag">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="design">
+        <div class="project-thumb clickable"
+             data-src="../images/manok.png"
+             data-title="Chick n' Jhoms Stall Logo"
+             data-desc="Logo for Chick n' Jhoms, food stall. Had to make it feel friendly and food related at a glance.">
+          <img src="../images/manok.png" alt="Brand Poster">
+        </div>
+        <div class="project-info">
+          <h3>Chick n' Jhoms Stall Logo</h3>
+          <p class="project-desc">Logo for Chick n' Jhoms, food stall. Had to make it feel friendly and food related at a glance.</p>
+          <div class="tag-list small">
+            <span class="tag">Illustrator</span>
+            <span class="tag">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="design">
+        <div class="project-thumb clickable"
+             data-src="../images/fish.jpg"
+             data-title="Fish Activity"
+             data-desc="A class exercise mixing illustration and color into one piece.">
+          <img src="../images/fish.jpg" alt="Fish Activity">
+        </div>
+        <div class="project-info">
+          <h3>Fish Activity</h3>
+          <p class="project-desc">A class exercise mixing illustration and color into one piece.</p>
+          <div class="tag-list small">
+            <span class="tag">Illustrator</span>
+            <span class="tag">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="design">
+        <div class="project-thumb clickable"
+             data-src="../images/Poster2.jpg"
+             data-title="Self Poster Design"
+             data-desc="A poster I made about myself, mostly to practice layout and typography.">
+          <img src="../images/Poster2.jpg" alt="Self Poster Design">
+        </div>
+        <div class="project-info">
+          <h3>Self Poster Design</h3>
+          <p class="project-desc">A poster I made about myself, mostly to practice layout and typography.</p>
+          <div class="tag-list small">
+            <span class="tag">Photoshop</span>
+            <span class="tag">Graphic Design</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLENDER / 3D -->
+
+      <div class="project-card" data-scope="academic" data-discipline="3d">
+        <div class="project-thumb clickable"
+             data-src="../images/multimedia/mm2/highlight.png"
+             data-title="Chick n' Jhoms Stall"
+             data-desc="A class project to design our own stall in Blender. We could use free premade props like the cashier and fridge, etc. but the structure itself had to be built from scratch.">
+          <img src="../images/multimedia/mm2/highlight.png" alt="Blender Output">
+        </div>
+        <div class="project-info">
+          <h3>Chick n' Jhoms Stall</h3>
+          <p class="project-desc">A class project to design our own stall in Blender. We could use free premade props like the cashier and fridge, etc. but the structure itself had to be built from scratch.</p>
+          <div class="tag-list small">
+            <span class="tag">Blender</span>
+            <span class="tag">3D Modeling</span>
+            <span class="tag">Texturing</span>
+          </div>
+
+          <div class="project-gallery" hidden>
+         <img src="../images/multimedia/mm2/highlight.png" alt="">
+         <img src="../images/multimedia/mm2/front view.png" alt="">
+         <img src="../images/multimedia/mm2/back view.png" alt="">
+         <img src="../images/multimedia/mm2/left view.png" alt="">
+         <img src="../images/multimedia/mm2/right view.png" alt="">
+         <img src="../images/multimedia/mm2/top view.png" alt="">
+       </div>
+
+          <div class="project-details" hidden>
+            <h4>Why a chicken stall</h4>
+            <p>Our professor's only rule was that the structure had to be built by us, premade assets like the cashier machine, fridge, and lamp were fine. I reused my earlier logo and poster designs for the branding, which is how I landed on Chick n' Jhoms.</p>
+          </div>
+       
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="personal" data-discipline="3d">
+        <div class="project-thumb clickable"
+             data-src="../images/lowpolycharthumbnail.png"
+             data-title="Low-Poly Character"
+             data-desc="A low-poly character build, practice with clean topology and getting more comfortable modeling in general.">
+          <img src="../images/lowpolycharthumbnail.png" alt="Low-Poly Character">
+        </div>
+        <div class="project-info">
+          <h3>Low-Poly Character</h3>
+          <p class="project-desc">A low-poly character build, practice with clean topology and getting more comfortable modeling in general.</p>
+          <div class="tag-list small">
+            <span class="tag">Blender</span>
+            <span class="tag">3D Modeling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="3d">
+        <div class="project-thumb clickable"
+             data-src="../images/hotairballoon.png"
+             data-title="Hotair Balloon"
+             data-desc="A hot air balloon model, practice with curved surfaces and materials.">
+          <img src="../images/hotairballoon.png" alt="Hotair Balloon">
+        </div>
+        <div class="project-info">
+          <h3>Hotair Balloon</h3>
+          <p class="project-desc">A hot air balloon model, practice with curved surfaces and materials.</p>
+          <div class="tag-list small">
+            <span class="tag">Blender</span>
+            <span class="tag">3D Modeling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="3d">
+        <div class="project-thumb clickable"
+             data-src="../images/multimedia/mm2/vase.png"
+             data-title="Vase"
+             data-desc="A simple vase, one of my early modeling exercises in Blender.">
+          <img src="../images/multimedia/mm2/vase.png" alt="Vase">
+        </div>
+        <div class="project-info">
+          <h3>Vase</h3>
+          <p class="project-desc">A simple vase, one of my early modeling exercises in Blender.</p>
+          <div class="tag-list small">
+            <span class="tag">Blender</span>
+            <span class="tag">3D Modeling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="academic" data-discipline="3d">
+        <div class="project-thumb clickable"
+             data-src="../images/multimedia/mm2/donut.png"
+             data-title="Donut"
+             data-desc="The classic Blender donut tutorial. Everyone starts here for a reason.">
+          <img src="../images/multimedia/mm2/donut.png" alt="Donut">
+        </div>
+        <div class="project-info">
+          <h3>Donut</h3>
+          <p class="project-desc">The classic Blender donut tutorial. Everyone starts here for a reason.</p>
+          <div class="tag-list small">
+            <span class="tag">Blender</span>
+            <span class="tag">3D Modeling</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- GAME DEV -->
+
+      <div class="project-card" data-scope="personal" data-discipline="gamedev">
+        <div class="project-thumb clickable"
+             data-src="../images/hollow-thumbnail.png"
+             data-title="Hollow (Horror Game)"
+             data-desc="My attempt at getting familiar with Unity and learning C# along the way. Still an early blockout, more about learning the tools than finishing a game.">
+          <img src="../images/hollow-thumbnail.png" alt="Hollow (Horror Game)">
+        </div>
+        <div class="project-info">
+          <h3>Hollow (Horror Game)</h3>
+          <p class="project-desc">My attempt at getting familiar with Unity and learning C# along the way. Still an early blockout, more about learning the tools than finishing a game.</p>
+          <div class="tag-list small">
+            <span class="tag">Level Design</span>
+            <span class="tag">Greyboxing</span>
+            <span class="tag">Work in Progress</span>
+          </div>
+
+        <div class="project-gallery" hidden>
+         <img src="../images/hollow-thumbnail.png" alt="">
+         <img src="../images/hollow1.png" alt="">
+         <img src="../images/hollow2.png" alt="">
+         <img src="../images/hollow3.png" alt="">
+         <img src="../images/hollow4.png" alt="">
+         <img src="../images/hollow5.png" alt="">
+       </div>
+
+          <div class="project-details" hidden>
+            <h4>Where it's at</h4>
+            <p>This is my first real attempt at using Unity and learning C#, so it's rough around the edges. I paused it to focus on other projects, but I'd like to come back to it eventually.</p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- VIDEO EDITING -->
+
+      <div class="project-card" data-scope="personal" data-discipline="video">
+        <div class="project-thumb clickable"
+            data-src="../images/shokudo.png"
+            data-video="https://www.youtube.com/embed/FZxZZzbRtSY"
+            data-title="Food Store Showcase Edit"
+            data-desc="A short, simple edit showcasing a local food store. Steady cuts, natural pacing, nothing over the top.">
+          <img src="../images/shokudo.png" alt="Food Store Showcase Edit">
+        </div>
+        <div class="project-info">
+          <h3>Food Store Showcase Edit</h3>
+          <p class="project-desc">A short, simple edit showcasing a local food store. Steady cuts, natural pacing, nothing over the top.</p>
+          <div class="tag-list small">
+            <span class="tag">Video Editing</span>
+            <span class="tag">CapCut</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card" data-scope="personal" data-discipline="video">
+  <div class="project-thumb clickable"
+       data-src="../images/montage.png"
+        data-video="https://www.youtube.com/embed/Vm9L2OSMndo"
+       data-title="Gaming Montage Edit"
+       data-desc="Just a personal thing since I'm a gamer. I edit clips in my free time and turn them into a fast-paced, hype montage in whatever style I'm feeling.">
+    <img src="../images/montage.png" alt="Gaming Montage Edit">
+  </div>
+  <div class="project-info">
+    <h3>Gaming Montage Edit</h3>
+    <p class="project-desc">Just a personal thing since I'm a gamer. I edit clips in my free time and turn them into a fast-paced, hype montage in whatever style I'm feeling.</p>
+    <div class="tag-list small">
+      <span class="tag">After Effects</span>
+      <span class="tag">Video Editing</span>
+      <span class="tag">Motion Graphics</span>
+    </div>
+  </div>
+</div>
+
+    </div>
+
+    <p class="no-results" id="noResults">Nothing matches that filter combination yet.</p>
+
+  </main>
+
+  <footer>
+    <div class="footer-socials">
+      <a href="https://github.com/jhomzss" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJqSvsjlKpTlzJnHwJGPMPSCZCNRbPSmnTpBghRtnqgXjWpDkSWGvwXRZJHcRszSXRfVpMg">Email</a>
+      <a href="https://www.facebook.com/jhomeltogadoo" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/jhomzs_/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@jhomel20" target="_blank" rel="noopener">TikTok</a>
+      <a href="https://www.youtube.com/@jhomeltogado8434" target="_blank" rel="noopener">YouTube</a>
+    </div>
+    <span id="footer-text">Designed & built by Jhomel Togado</span>
+  </footer>
+
+  <div id="resumeModal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <iframe src="../file/JhomelTogado_Resume.pdf#view=FitH"></iframe>
+    </div>
+  </div>
+
+  <!-- Lightbox for project media -->
+  <div id="lightbox" class="modal">
+    <div class="lightbox-content">
+      <span class="close" id="closeLightbox">&times;</span>
+      <div class="lightbox-media-wrap" id="lightboxMediaWrap">
+        <button class="lightbox-nav-btn prev" id="lightboxPrev" aria-label="Previous image" hidden>&#8249;</button>
+        <div class="lightbox-media" id="lightboxMedia"></div>
+        <button class="lightbox-nav-btn next" id="lightboxNext" aria-label="Next image" hidden>&#8250;</button>
+      </div>
+      <div class="lightbox-info">
+        <span class="lightbox-scope" id="lightboxScope"></span>
+        <div class="lightbox-info-head">
+          <h3 id="lightboxTitle"></h3>
+          <span class="lightbox-counter" id="lightboxCounter"></span>
+        </div>
+        <p id="lightboxDesc"></p>
+        <div class="tag-list small" id="lightboxTags"></div>
+        <div class="project-links" id="lightboxLinks"></div>
+        <div class="lightbox-details" id="lightboxDetails"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="../scripts/scripts.js"></script>
+</body>
+</html>
